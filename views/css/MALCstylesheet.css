@@ -1,0 +1,67 @@
+body {
+    /* The background image */
+    /* Set a specified height, or the minimum height for the background image */
+    min-height: 500px;
+    /* Set background image to fixed (don't scroll along with the page) */
+    background-attachment: fixed;
+    /* Center the background image */
+    background-position: center;
+    /* Set the background image to no repeat */
+    background-repeat: no-repeat;
+    /* Scale the background image to be as large as possible */
+    background-size: cover;
+}
+
+.Main-buttons {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: inherit;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.card {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    /* Added */
+    float: auto;
+    /* Added */
+    /* Added */
+    width: 16rem;
+    height: 35rem;
+}
+
+#anime_name {
+    text-align: center;
+    font: 15px verdana;
+    overflow: hidden;
+}
+
+#anime_user,
+#anime_episode,
+#anime_count,
+#anime_rank,
+#anime_status {
+    text-align: center;
+    font: 14px verdana;
+}
+
+#compare_id {
+    text-align: center;
+    font: 17px Arial;
+    font-weight: bold;
+}
+
+#anime_table {
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    overflow: hidden;
+    vertical-align: center;
+}
+
+#anime_poster {
+    display: block;
+    height: 400px;
+    width: inherit;
+}

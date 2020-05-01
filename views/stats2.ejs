@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="./css/MALCstylesheet.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
+    <title>MALC - Comparing Result</title>
+    <link rel="icon" type="image/ico" href="./imgs/malC.png">
+    <style>
+        body {
+            background-image: url("./imgs/wallpaperflare.com_wallpaper (3).jpg");
+        }
+        
+        ;
+        .btn-dark {}
+        
+        .active {
+            background-color: dimgrey !important;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div>
+            <a class="navbar-brand" href="#">
+                <img src="./imgs/malC.png" width="30" height="30" class="d-inline-block align-top" alt=""> MAL Comparator
+            </a>
+        </div>
+        <div>
+            <ul class="navbar-nav">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Statistics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Show Comparison</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">New Comparison</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+
+    <div class="container">
+
+    </div>
+
+
+
+    <div class="container-fluid" style="width: 80%">
+        <div class="row" id="cardlist">
+
+            <!--
+            <div class="card" id="card1">
+                <img src="./imgs/wallpaperflare.com_wallpaper (3).jpg" id="anime_poster" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title" id="anime_name"><a href="${mylist[id].url}">Anime Name</a></h4>
+                    <h4 class="card-title" id="anime_episode">Episodes# </h4>
+
+                    <hr class="my-2">
+                    <table>
+                        <tr id="anime_table">
+                            <td id="anime_table">
+                                <h5 id="anime_user"><img id="anime_status" src="./imgs/mention.png" height="20"> @user1
+                                </h5>
+                            </td>
+
+                            <td id="anime_table">
+                                <h5 id="anime_user"><img id="anime_status" src="./imgs/mention.png" height="20"> @user1
+                                </h5>
+                            </td>
+                        </tr>
+                        <tr id="anime_table">
+                            <td id="anime_table">
+                                <h5 id="anime_status"> <img id="anime_status" src="./imgs/status.png" height="20"> Status</h5>
+                            </td>
+                            <td id="anime_table">
+                                <h5 id="anime_status"> <img id="anime_status" src="./imgs/status.png" height="20"> Status</h5>
+                            </td>
+                        </tr>
+                        <tr id="anime_table">
+                            <td id="anime_table">
+                                <h5 id="anime_status"> <img id="anime_status" src="./imgs/score.png" height="20"> score
+                                </h5>
+                            </td>
+                            <td id="anime_table">
+                                <h5 id="anime_status"> <img id="anime_status" src="./imgs/score.png" height="20"> score
+                                </h5>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+-->
+
+
+        </div>
+    </div>
+
+
+</body>
+
+<script>
+    var mylist = <%- JSON.stringify(typeof top != 'undefined' ? top : bottom) %>;
+    var id = 0
+
+
+    $("#cardlist").append(`<div class="card" id="card${id}">
+                 <a href="${mylist[id].url}" id="anime_poster" class="card-img-top"><img src=${mylist[id].Img_url} id="anime_poster" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                        <h4 class="card-title" id="anime_name"><a href="${mylist[id].url}">${mylist[id].title}</a></h4>
+                        <h4 class="card-title" id="anime_episode">Episodes#${mylist[id].episodes} </h4>
+
+                        <hr class="my-2">
+                        <table>
+                            <tr id="anime_table">
+                                <td id="anime_table">
+                                    <h5 id="anime_rank"><img id="anime_status" src="./imgs/rank.png" height="20"> Rank: ${id}</h5>
+                                </td>
+
+                                <td id="anime_table">
+                                    <h5 id="anime_count"> <img id="anime_status" src="./imgs/count.png" height="20"> Count: ${mylist[id].episodes} </h5>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>`);
+
+    console.log(mylist);
+    for (id = 1; id < mylist.length; id++) {
+        console.log(id)
+        $(`#card${id-1}`).after(
+            `<div class="card" id="card${id}">
+                 <a href="${mylist[id].url}" id="anime_poster" class="card-img-top"><img src=${mylist[id].Img_url} id="anime_poster" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                        <h4 class="card-title" id="anime_name"><a href="${mylist[id].url}">${mylist[id].title}</a></h4>
+                        <h4 class="card-title" id="anime_episode">Episodes#${mylist[id].episodes} </h4>
+
+                        <hr class="my-2">
+                        <table>
+                            <tr id="anime_table">
+                                <td id="anime_table">
+                                    <h5 id="anime_rank"><img id="anime_status" src="./imgs/rank.png" height="20"> Rank: ${id}</h5>
+                                </td>
+
+                                <td id="anime_table">
+                                    <h5 id="anime_count"> <img id="anime_status" src="./imgs/count.png" height="20"> Count: ${mylist[id].episodes} </h5>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>`);
+
+    }
+</script>
+
+</html>

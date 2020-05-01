@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="./css/MALCstylesheet.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <title>MALC - Statistics</title>
+    <link rel="icon" type="image/ico" href="./imgs/malC.png">
+    <style>
+        .background-image {
+            /*        background-size: 100% 100%;*/
+            background-image: url("./imgs/wallpaperflare.com_wallpaper (5).jpg");
+            /*        background-image: url(imgs/background2.jpg);*/
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            filter: blur(4px);
+            background-repeat: no-repeat;
+            top: -5px;
+            transform: scale(1.05);
+        }
+        
+        @import url('https://fonts.googleapis.com/css?family=Roboto');
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        h2 {
+            margin: 0px;
+            text-transform: uppercase;
+        }
+        
+        h6 {
+            margin: 0px;
+            color: #777;
+        }
+        
+        .wrapper {
+            text-align: center;
+            margin: 50px auto;
+        }
+        
+        .tabs {
+            margin-top: 50px;
+            font-size: 15px;
+            padding: 0px;
+            list-style: none;
+            background: #fff;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            border-radius: 50px;
+            position: relative;
+        }
+        
+        .tabs a {
+            text-decoration: none;
+            color: #777;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            transition-duration: 0.6s;
+        }
+        
+        .tabs a.active {
+            color: #fff;
+        }
+        
+        .tabs a i {
+            margin-right: 5px;
+        }
+        
+        .tabs .selector {
+            height: 100%;
+            display: inline-block;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 1;
+            border-radius: 50px;
+            transition-duration: 0.6s;
+            transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            background: #05abe0;
+            background: -moz-linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
+            background: -webkit-linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
+            background: linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#05abe0', endColorstr='#8200f4', GradientType=1);
+        }
+        
+        ;
+        /*         !important;*/
+        
+        .btn-dark {
+            background-color:
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="background-image">
+        <!--        <img src="imgs/background1.jpg" width="100%" height="100%" />-->
+    </div>
+    <div>
+
+
+
+        <div class="wrapper">
+            <h2><img src="imgs/Title.png"></h2>
+            <h6><b><i> Find Your NExt ANiME ! </i></b></h6>
+            <nav class="tabs">
+                <div class="selector"></div>
+                <a href="/" class="active"><i class="fas fa-bolt"></i>New Comparasion</a>
+                <a href="#" class="" id="t2"><i class="fas fa-hand-rock"></i>Top 20 Rarest</a>
+                <!--    <a href="#"><i class="fas fa-bolt"></i></a>-->
+                <a href="#" class="" id="t3"><i class="fas fa-burn"></i>Top 20 Common</a>
+            </nav>
+        </div>
+        <!--
+ <div class="container">
+            <div class="btn-group btn-group-justified btn-group-lg Main-buttons" >
+                <a href="/MostCommon" class="btn btn-dark mr-1">TOP20 - Most Common Animes</a>
+                <a href="/rarest" class="btn btn-dark mr-1">TOP20 - Least Common Animes</a>
+            </div>
+        </div>
+-->
+
+        <div class="container-fluid" style="width: 80%">
+            <div class="row" id="cardlist">
+
+                <!--
+                <div class="card">
+                    <img src="./imgs/wallpaperflare.com_wallpaper (3).jpg" id="anime_poster" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title" id="anime_name"><a href="www.google.com">Anime Name</a></h4>
+                        <h4 class="card-title" id="anime_episode">Episodes# </h4>
+
+                        <hr class="my-2">
+                        <table>
+                            <tr id="anime_table">
+                                <td id="anime_table">
+                                    <h5 id="anime_rank"><img id="anime_status" src="./imgs/rank.png" height="20"> Rank</h5>
+                                </td>
+
+                                <td id="anime_table">
+                                    <h5 id="anime_count"> <img id="anime_status" src="./imgs/count.png" height="20"> Count</h5>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+-->
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    var tabs = $('.tabs');
+    var items = $('.tabs').find('a').length;
+    var selector = $(".tabs").find(".selector");
+    var activeItem = tabs.find('.active');
+    var activeWidth = activeItem.innerWidth();
+    $(".selector").css({
+        "left": activeItem.position.left + "px",
+        "width": activeWidth + "px"
+    });
+
+    $(".tabs").on("click", "a", function() {
+        $('.tabs a').removeClass("active");
+        $(this).addClass('active');
+        var activeWidth = $(this).innerWidth();
+        var itemPos = $(this).position();
+        $(".selector").css({
+            "left": itemPos.left + "px",
+            "width": activeWidth + "px"
+        });
+    });
+    if (<%=common%>) {
+        $("#t3").trigger('click')
+        $("#t2").attr("href", "/rarest")
+
+    } else {
+        $("#t2").trigger('click')
+        $("#t3").attr("href", "/MostCommon")
+
+
+    }
+
+
+    var mylist = <%- JSON.stringify(typeof top != 'undefined' ? top : bottom) %>;
+    var id = 0
+
+
+    $("#cardlist").append(`<div class="card" id="card${id}">
+                 <a href="${mylist[id].url}" id="anime_poster" class="card-img-top"><img src=${mylist[id].Img_url} id="anime_poster" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                        <h4 class="card-title" id="anime_name"><a href="${mylist[id].url}">${mylist[id].title}</a></h4>
+                        <h4 class="card-title" id="anime_episode">Episodes#${mylist[id].episodes} </h4>
+
+                        <hr class="my-2">
+                        <table>
+                            <tr id="anime_table">
+                                <td id="anime_table">
+                                    <h5 id="anime_rank"><img id="anime_status" src="./imgs/rank.png" height="20"> Rank: ${id+1}</h5>
+                                </td>
+
+                                <td id="anime_table">
+                                    <h5 id="anime_count"> <img id="anime_status" src="./imgs/count.png" height="20"> Count: ${mylist[id].count} </h5>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>`);
+    console.log(mylist);
+    for (var id = 1; id < mylist.length; id++) {
+        $(`#card${id-1}`).after(
+            `<div class="card" id="card${id}">
+                 <a href="${mylist[id].url}" id="anime_poster" class="card-img-top"><img src=${mylist[id].Img_url} id="anime_poster" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                        <h4 class="card-title" id="anime_name"><a href="${mylist[id].url}">${mylist[id].title}</a></h4>
+                        <h4 class="card-title" id="anime_episode">Episodes#${mylist[id].episodes} </h4>
+
+                        <hr class="my-2">
+                        <table>
+                            <tr id="anime_table">
+                                <td id="anime_table">
+                                    <h5 id="anime_rank"><img id="anime_status" src="./imgs/rank.png" height="20"> Rank: ${id+1}</h5>
+                                </td>
+
+                                <td id="anime_table">
+                                    <h5 id="anime_count"> <img id="anime_status" src="./imgs/count.png" height="20"> Count: ${mylist[id].count} </h5>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>`);
+
+    }
+</script>
+
+</html>
