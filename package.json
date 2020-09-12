@@ -16,6 +16,6 @@
     "fs": "0.0.1-security",
     "mongodb": "^3.5.7",
     "mongoose": "^5.9.11",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1"
   }
 }
